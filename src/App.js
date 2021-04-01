@@ -8,6 +8,7 @@ import { DashboardController } from "Components/DashboardController";
 import config from "Config/config";
 
 console.log(config);
+console.log(config.HOST);
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
