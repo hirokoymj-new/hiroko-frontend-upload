@@ -7,7 +7,7 @@ import { ThemeProvider } from "Styles/ThemeProvider";
 import { DashboardController } from "Components/DashboardController";
 import config from "Config/config";
 
-console.log(config.APOLLO_CLIENT_URI);
+console.log(config);
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
