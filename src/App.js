@@ -5,13 +5,13 @@ import { BrowserRouter } from "react-router-dom";
 import { ReduxProvider } from "Redux/ReduxProvider";
 import { ThemeProvider } from "Styles/ThemeProvider";
 import { DashboardController } from "Components/DashboardController";
+import config from "Config/config";
 
-const URI = "https://hirokoymj-backend-upload.herokuapp.com/graphql";
-const URI_LOCAL = "http://localhost:4000/graphql";
+console.log(config.APOLLO_CLIENT_URI);
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
-  link: createUploadLink({ uri: URI }),
+  link: createUploadLink({ uri: config.APOLLO_CLIENT_URI }),
 });
 
 const App = () => {

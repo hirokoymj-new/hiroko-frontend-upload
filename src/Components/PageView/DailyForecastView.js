@@ -16,7 +16,7 @@ import { DashboardLayout } from "Components/Layouts/DashboardLayout";
 import { CitySearchAutoComplete } from "Components/Forms/CitySearchAutoComplete";
 import { DailyForecast } from "Components/Weather/DailyForcast";
 import { GoogleMap } from "Components/Weather/GoogleMap";
-import { config } from "Config/config";
+import config from "Config/config";
 import { CURRENT_WEATHER_BY_CITY } from "Queries/Weather";
 import { CurrentWeatherInfoSkeleton } from "Components/Skeleton/WeatherSkeleton";
 

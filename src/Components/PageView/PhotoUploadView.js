@@ -9,6 +9,7 @@ import blue from "@material-ui/core/colors/blue";
 
 import { SINGLE_UPLOAD } from "Mutations/Photo";
 import { PHOTOS } from "Queries/Photo";
+import config from "Config/config";
 
 const useStyles = makeStyles((theme) => ({
   thumbnail: {
@@ -87,7 +88,7 @@ export const PhotoUploadView = ({ location }) => {
   const rowsWithPhoto = photos.map(({ fileName }) => {
     return (
       <ImageDropZone
-        imgURL={`http://localhost:4000/images/${fileName}`}
+        imgURL={`${config.HOST}images/${fileName}`}
         key={fileName}
       />
     );

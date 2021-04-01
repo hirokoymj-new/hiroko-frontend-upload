@@ -101,7 +101,6 @@ export const MobileMenuDrawer = connect(
       <List>
         <TechNavItems setDrawerClosed={closeNavigation} />
       </List>
-      <Divider />
     </Drawer>
   );
 });
