@@ -44,16 +44,15 @@ export const ImageDropZone = ({ imgURL = "" }) => {
   const [singleUpload] = useMutation(SINGLE_UPLOAD, {
     onCompleted: (data) => {
       const url = get(data, "singleUpload.url", "");
-      setUrl(url);
+      console.log("singleUpload", url);
+      setUrl(`${config.HOST}images/${url}`);
     },
   });
   const onDrop = useCallback((acceptedFiles) => {
     console.log(acceptedFiles);
     const files = acceptedFiles.map((file) => file);
-    console.log(files);
     if (files.length === 0) return;
     const file = files[0];
-    console.log(file);
     singleUpload({ variables: { file: file, location: "LA" } });
   }, []);
 
